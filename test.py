@@ -9,8 +9,7 @@ class TestRemainder(unittest.TestCase):
         self.assertEqual(remainder(25, 4), 1)
 
     def test_remainder_by_zero(self):
-        with self.assertRaises(ValueError):
-            remainder(10, 0)
+        self.assertRaises(ValueError, remainder, 10, 0)
 
 if __name__ == '__main__':
     unittest.main()
